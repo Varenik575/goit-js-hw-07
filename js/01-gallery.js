@@ -2,7 +2,7 @@ import { galleryItems } from './gallery-items.js';
 
 const imageCardsMarkup = createImageCards(galleryItems);
 const imageCardContainer = document.querySelector('.gallery');
-let modal; // Variable that is used to create a lightbox element, no idea how to make it acessible in onEscapeKeyPress otherwise
+let modal; 
 insertMarkup(imageCardsMarkup, imageCardContainer)
 
 imageCardContainer.addEventListener('click', onImageClick);
@@ -58,16 +58,3 @@ function onEscapeKeyPress(event) {
     modal.close();
   }
 }
-
-
-
-/*<li class="gallery__item">
-  <a class="gallery__link" href="large-image.jpg">
-    <img
-      class="gallery__image"
-      src="small-image.jpg"
-      data-source="large-image.jpg"
-      alt="Image description"
-    />
-  </a>
-</li>*/
